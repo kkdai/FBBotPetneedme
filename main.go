@@ -26,6 +26,7 @@ var petsDB *pnm.Pets
 
 func main() {
 	petsDB = pnm.NewPets()
+	log.Println("Init pet DB:", petsDB)
 	port := os.Getenv("PORT")
 	log.Println("Server start in port:", port)
 	mess.VerifyToken = os.Getenv("TOKEN")
@@ -45,6 +46,7 @@ func MessageReceived(event Event, opts MessageOpts, msg ReceivedMessage) {
 		return
 	}
 	petObj := petsDB.GetNextPet()
+	log.Println("Got pet:", petObj)
 	out := fmt.Sprintf("您好，目前的動物：名為%s, 所在地為:%s, 敘述: %s 電話為:%s", petObj.Name, petObj.Resettlement, petObj.Note, petObj.Phone)
 
 	resp, err := mess.SendSimpleMessage(opts.Sender.ID, fmt.Sprintf("%s %s 你好，這裡有寵物等著你領樣: %s", profile.FirstName, profile.LastName, out))
