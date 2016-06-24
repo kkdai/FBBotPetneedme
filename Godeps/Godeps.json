@@ -1,9 +1,18 @@
 {
-	"ImportPath": "github.com/kkdai/FBBotTemplate",
+	"ImportPath": "github.com/kkdai/FBBotPetneedme",
 	"GoVersion": "go1.6",
 	"GodepVersion": "v74",
 	"Packages": [
 		"./..."
 	],
-	"Deps": []
+	"Deps": [
+		{
+			"ImportPath": "github.com/kkdai/pnm",
+			"Rev": "c42345ce6b4741d6395346fc5df8b213f9df2be8"
+		},
+		{
+			"ImportPath": "github.com/kkdai/pnm/opendata",
+			"Rev": "c42345ce6b4741d6395346fc5df8b213f9df2be8"
+		}
+	]
 }

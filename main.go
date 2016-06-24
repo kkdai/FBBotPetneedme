@@ -17,11 +17,15 @@ import (
 	"log"
 	"net/http"
 	"os"
+
+	pnm "github.com/kkdai/pnm"
 )
 
 var mess = &Messenger{}
+var petsDB *pnm.Pets
 
 func main() {
+	petsDB = pnm.NewPets()
 	port := os.Getenv("PORT")
 	log.Println("Server start in port:", port)
 	mess.VerifyToken = os.Getenv("TOKEN")
@@ -40,7 +44,10 @@ func MessageReceived(event Event, opts MessageOpts, msg ReceivedMessage) {
 		fmt.Println(err)
 		return
 	}
-	resp, err := mess.SendSimpleMessage(opts.Sender.ID, fmt.Sprintf("Hello   , %s %s, %s", profile.FirstName, profile.LastName, msg.Text))
+	petObj := petsDB.GetNextPet()
+	out := fmt.Sprintf("您好，目前的動物：名為%s, 所在地為:%s, 敘述: %s 電話為:%s", petObj.Name, petObj.Resettlement, petObj.Note, petObj.Phone)
+
+	resp, err := mess.SendSimpleMessage(opts.Sender.ID, fmt.Sprintf("%s %s 你好，這裡有寵物等著你領樣: %s", profile.FirstName, profile.LastName, out))
 	if err != nil {
 		fmt.Println(err)
 	}
