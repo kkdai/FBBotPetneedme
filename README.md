@@ -8,7 +8,7 @@
 
 ![](http://petneed.me/static//img/petNeedme_full_color.png)
 
-透過 Line 來查看台北市目前有哪些流浪動物需要領養？ 
+透過 [FB 粉絲頁面的機器人](https://www.facebook.com/Petneedme-921857047925669) 來查看台北市目前有哪些流浪動物需要領養？ 
 
 
 主要功能:
