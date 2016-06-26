@@ -4,6 +4,8 @@
 [![Join the chat at https://gitter.im/kkdai/FBBotPetNeedMe](https://badges.gitter.im/kkdai/FBBotPetNeedMe.svg)](https://gitter.im/kkdai/LineBotPetNeedMe?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
  [![GoDoc](https://godoc.org/github.com/kkdai/FBBotPetNeedMe?status.svg)](https://godoc.org/github.com/kkdai/FBBotPetNeedMe)  [![Build Status](https://travis-ci.org/kkdai/FBBotPetNeedMe.svg?branch=master)](https://travis-ci.org/kkdai/FBBotPetNeedMe)
+ 
+  [![](https://goreportcard.com/badge/github.com/kkdai/FBBotPetNeedMe)](https://goreportcard.com/report/github.com/kkdai/FBBotPetNeedMe)
 
 
 ![](http://petneed.me/static//img/petNeedme_full_color.png)
@@ -13,10 +15,6 @@
 
 主要功能:
 =============
-
-目前僅僅支援顯示台北市流浪動物資料，並且顯示該動物圖片．
-
-![](images/LineDialog.png)
 
 歡迎各位建議任何新的功能．
 
@@ -28,14 +26,14 @@
 意見與建議
 =============
 
-歡迎到 [issue](https://github.com/kkdai/LineBotTaipeiPets/issues) 寫下你的意見，或是一起來幫助我．
+歡迎到 [issue](https://github.com/kkdai/FBBotPetNeedMe/issues) 寫下你的意見，或是一起來幫助我．
 
 
 
 想要自己架設一個 FB 機器人?
 =============
 
-參考我的[教學文章([Golang][教學] 在 Heroku 建立你自己的 Line 機器人 (Line Bot API))](http://www.evanlin.com/create-your-line-bot-golang/)，或是[教學 Github ](https://github.com/kkdai/LineBotTemplate)
+參考我的[教學 Github ](https://github.com/kkdai/FBBotTemplate)
 
 
 Inspired By
