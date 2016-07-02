@@ -45,6 +45,7 @@ func (m *Messenger) SendMessage(mq MessageQuery) (*MessageResponse, error) {
 	return response, err
 }
 
+//SendSimpleMessage :
 func (m *Messenger) SendSimpleMessage(recipient string, message string) (*MessageResponse, error) {
 	return m.SendMessage(MessageQuery{
 		Recipient: Recipient{
@@ -56,6 +57,7 @@ func (m *Messenger) SendSimpleMessage(recipient string, message string) (*Messag
 	})
 }
 
+//SendImageMessage :
 func (m *Messenger) SendImageMessage(recipient string, imgUrl string) (*MessageResponse, error) {
 	img := make(map[string]string)
 	img["url"] = imgUrl
@@ -72,7 +74,6 @@ func (m *Messenger) SendImageMessage(recipient string, imgUrl string) (*MessageR
 			ID: recipient,
 		},
 		Message: SendMessage{
-			Text:       imgUrl,
 			Attachment: at,
 		},
 	})
