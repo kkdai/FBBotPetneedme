@@ -10,7 +10,6 @@ import (
 	"encoding/json"
 	"errors"
 	"io/ioutil"
-	"log"
 	"net/http"
 )
 
@@ -62,13 +61,6 @@ func (m *Messenger) SendImageMessage(recipient string, imgUrl string) (*MessageR
 	img := make(map[string]string)
 	img["url"] = imgUrl
 	at := &Attachment{Type: AttachmentTypeImage, Payload: img}
-	mms := SendMessage{
-		Text:       imgUrl,
-		Attachment: at,
-	}
-	data, _ := json.Marshal(mms)
-	log.Println(">>>>", string(data))
-
 	return m.SendMessage(MessageQuery{
 		Recipient: Recipient{
 			ID: recipient,
