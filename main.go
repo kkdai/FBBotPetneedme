@@ -53,8 +53,8 @@ func MessageReceived(event Event, opts MessageOpts, msg ReceivedMessage) {
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Printf("%+v", resp)
+	log.Printf("SendMsg: %+v", resp)
 
 	resp2, err := mess.SendImageMessage(opts.Sender.ID, petObj.ImageName)
-	fmt.Printf("%+v", resp2)
+	log.Printf("SendImage: %+v, %s", resp2, petObj.ImageName)
 }
