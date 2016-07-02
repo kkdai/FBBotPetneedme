@@ -56,5 +56,5 @@ func MessageReceived(event Event, opts MessageOpts, msg ReceivedMessage) {
 	log.Printf("SendMsg: %+v", resp)
 
 	resp2, err := mess.SendImageMessage(opts.Sender.ID, petObj.ImageName)
-	log.Printf("SendImage: %+v, %s", resp2, petObj.ImageName)
+	log.Printf("SendImage: %+v, %s, ID=%s, gotMsg=%s", resp2, petObj.ImageName, opts.Sender.ID, msg.Text)
 }
